@@ -37,23 +37,30 @@ a.backbtn:hover {
 <h1>Domain Checker 1.0</h1>
 <p>By Jan Cordeiro</p><br />
 <div class="domainphp">
+
 <?php
 if(isset($_POST['submit'])) {
     $domain = $_POST['domain'];
     $recordTypes = array("A", "MX", "NS", "SOA", "TXT");
+    $disponivel = true;
 
     foreach ($recordTypes as $recordType) {
         if (checkdnsrr($domain, $recordType)) {
-            echo "<p style='color:red;'>The <u>$domain</u> domain is not available!</p>";
-            exit();
+            $disponivel = false;
+            break;
         }
     }
 
-    echo "<p style='color:green;'>The <u>$domain</u> domain is available to register!</p>";
+    if($disponivel){
+        echo "<p style='color:green;'>The <u>$domain</u> domain is available to register!</p>";
+    }else{
+        echo "<p style='color:red;'>The <u>$domain</u> domain is not available!</p>";
+    }
 }
 ?>
+
 </div>
-<p><a class="backbtn" href="javascript:history.back()">VOLTAR</a></p><br /><br />
-<p><a href="https://github.com/jancordeiro" target="_blank"><img src="github-mark-white.png" width="35" height="35" alt="Github Logo"></a></p>
+<div><p><a class="backbtn" href="javascript:history.back()">VOLTAR</a></p><br />
+<p><a href="https://github.com/jancordeiro" target="_blank"><img src="github-mark-white.png" width="35" height="35" alt="Github Logo"></a></p></div>
 </body>
 </html>
