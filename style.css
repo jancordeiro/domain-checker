@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #22c1c3, #fdbb2d);
+  color: #fdbb2d;  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	width: 600px;
+	border-radius: 15px;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(33, 33, 33, 0.8);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 5px 5px 5px #1f1f1f;
+}
+
+#label {
+    font-weight: 300;
+}
+
+#domain {
+	border: none;
+	outline: none;
+	height: 2rem;
+	width: 50%;
+	border-radius: 5px 0 0 5px;
+	text-decoration: none;
+}
+
+
+.domainphp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+a.backbtn {
+  background-color: #fdbb2d;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a.backbtn:hover {
+  background-color: #22c1c3;
+  color: #fff;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  background-color: #fdbb2d;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #22c1c3;
+  color: #fff;
+  font-weight: bold;
+}
+
+a.github {
+	text-decoration: none;
+	font-size: 25px;
+	color: #fdbb2d;
+}
+
+a.github:hover {
+	text-decoration: none;
+	font-size: 25px;
+	color: #22c1c3;
+}
+
+@media (max-width: 500px) {
+	#domain {
+		border: none;
+		outline: none;
+		height: 2rem;
+		width: 90%;
+		border-radius: 5px 5px 0 0;
+		text-decoration: none;
+	}
+	
+	input[type="submit"] {
+		width: 90%;		
+		border-radius: 0 0 5px 5px;
+	}
+	
+	.box {
+		width: 100%;
+		height: 85vh;
+		margin: 0;
+		padding: 50px;
+		border-radius: 0;
+		box-shadow: 0 0 0 0;
+	}
+}
