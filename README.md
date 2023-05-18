@@ -1,3 +1,3 @@
 # Domain Checker
 ---
-A simple PHP domain checker.
+A simple domain checker made with PHP vanilla.
